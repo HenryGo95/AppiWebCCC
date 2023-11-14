@@ -1,0 +1,55 @@
+﻿@{
+    ViewData["Title"] = "Menú";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <style type="text/css">
+        body {
+            background-color: #2a2c59;
+        }
+
+        h1 {
+            text-align: center;
+            color: white;
+            /*margin-top: 250px; /* Puedes ajustar el valor según tus preferencias */
+            margin-bottom: 0;
+        }
+
+        .img-custom {
+            max-height: 0px; /* Ajusta la altura máxima según tus preferencias */
+            display: block; /* Asegura que la imagen no tenga espacio extra alrededor */
+            margin: auto; /* Centra la imagen horizontalmente */
+            border: 2px solid #ccc; /* Añade un borde de 2px y color gris claro */
+            border-radius: 10px; /* Añade esquinas redondeadas */
+             max-height: 400px; /* Ajusta la altura máxima según tus preferencias */
+            max-width: 600px; /* Ajusta el ancho máximo según tus preferencias */
+        }
+
+     
+
+    </style>
+
+</head>
+<body>
+
+<h1>Bienvenido al Menú</h1>
+
+    <div class="d-flex align-items-center">
+        <img src="/img/images.jpg" alt="Descripción de la imagen" class="img-custom">
+        <div class="text-left ml-4">
+            <ul class="list-unstyled mb-4">
+                <li class="mb-3"><a href="https://localhost:7298/Home/AgregarLibro" class="btn btn-primary">Agregar Libro</a></li>
+                <li class="mb-3"><a href="https://localhost:7298/Home/ModificarLibro" class="btn btn-success">Modificar Libro</a></li>
+                <li class="mb-3"><a href="https://localhost:7298/Home/EliminarLibro" class="btn btn-danger">Eliminar Libro</a></li>
+                <li class="mb-3"><a href="https://localhost:7298/Home/ConsultarLibro" class="btn btn-warning">Consultar BD</a></li>
+                <li class="mb-3"><a href="https://localhost:7298/Home/NuevoUsuario" class="btn btn-info">Agregar Usuario</a></li>
+            </ul>
+        </div>
+    </div>
+
+
+
+</body>
+</html>

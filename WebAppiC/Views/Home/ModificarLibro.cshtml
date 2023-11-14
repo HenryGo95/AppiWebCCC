@@ -1,0 +1,64 @@
+﻿@{
+    ViewData["Title"] = "Modificar Libro";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <style type="text/css">
+        body {
+            background-color: #2a2c59;
+        }
+
+        h1 {
+            text-align: center;
+            color: white;
+            /*margin-top: 250px; /* Puedes ajustar el valor según tus preferencias */
+            margin-bottom: 0;
+        }
+
+        .img-custom {
+            max-height: 0px; /* Ajusta la altura máxima según tus preferencias */
+            display: block; /* Asegura que la imagen no tenga espacio extra alrededor */
+            margin: auto; /* Centra la imagen horizontalmente */
+            border: 2px solid #ccc; /* Añade un borde de 2px y color gris claro */
+            border-radius: 10px; /* Añade esquinas redondeadas */
+             max-height: 400px; /* Ajusta la altura máxima según tus preferencias */
+            max-width: 600px; /* Ajusta el ancho máximo según tus preferencias */
+        }
+
+     
+
+    </style>
+
+</head>
+<body>
+
+
+<div class="text-center">
+    <h1 class="display-4">Modificar Libro</h1>
+    <form method="post" action="/Libros/ModificarLibro">
+        <div class="form-group">
+            <label for="buscarLibro">Buscar Libro:</label>
+            <input type="text" id="buscarLibro" name="buscarLibro" class="form-control" required />
+            <button type="submit" class="btn btn-primary">Buscar</button>
+        </div>
+        <div class="form-group">
+            <label for="titulo">Título:</label>
+            <input type="text" id="titulo" name="titulo" class="form-control" value="@ViewData["Titulo"]" required />
+        </div>
+        <div class="form-group">
+            <label for="autor">Autor:</label>
+            <input type="text" id="autor" name="autor" class="form-control" value="@ViewData["Autor"]" required />
+        </div>
+        <div class="form-group">
+            <label for="anioPublicacion">Año de Publicación:</label>
+            <input type="number" id="anioPublicacion" name="anioPublicacion" class="form-control" value="@ViewData["AnioPublicacion"]" required />
+        </div>
+        <button type="submit" class="btn btn-primary">Modificar</button>
+        <a href="https://localhost:7298/Home/Menu" class="btn btn-secondary">Cancelar</a>
+    </form>
+</div>
+
+</body>
+</html>

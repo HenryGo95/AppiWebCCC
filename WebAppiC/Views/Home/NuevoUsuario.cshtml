@@ -1,0 +1,37 @@
+﻿@{
+    ViewData["Title"] = "Nuevo Usuario";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Nuevo Usuario</h1>
+    <form method="post" action="/Usuarios/AgregarUsuario">
+        <div class="form-group">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" class="form-control" required />
+        </div>
+        <div class="form-group">
+            <label for="apellido">Apellido:</label>
+            <input type="text" id="apellido" name="apellido" class="form-control" required />
+        </div>
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" class="form-control" required />
+        </div>
+        <div class="form-group">
+            <label for="sexo">Género:</label>
+            <select id="sexo" name="sexo" class="form-control" required>
+                <option value="Masculino">Masculino</option>
+                <option value="Femenino">Femenino</option>
+                <option value="Otro">39 tipos de gays</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="contrasena">Contraseña:</label>
+            <input type="password" id="contrasena" name="contrasena" class="form-control" required />
+        </div>
+        <!-- Otros campos según tus necesidades -->
+
+        <button type="submit" class="btn btn-primary">Agregar Usuario</button>
+        <a href="/Home/Menu" class="btn btn-secondary">Cancelar</a>
+    </form>
+</div>

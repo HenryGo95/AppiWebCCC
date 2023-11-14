@@ -1,0 +1,89 @@
+﻿@{
+    ViewData["Title"] = "Iniciar Sesión";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <style type="text/css">
+        body {
+            background-color: #2a2c59;
+        }
+
+        h2 {
+            text-align: center;
+            color: black;
+            margin-top: 250px; /* Puedes ajustar el valor según tus preferencias */
+            margin-bottom: 0;
+        }
+
+        .card {
+            background-color: #000000; /* Cambia el color a negro */
+            color: white; /* Cambia el color del texto a blanco para que sea legible en el fondo negro */
+            margin: 0;
+            height: 400px; /* Cambia la altura según tus preferencias */
+            width: 400px; /* Cambia la anchura según tus preferencias */
+        }
+
+        .card-body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+        }
+
+        form {
+            margin-top: 0; /* Eliminas el margen superior del formulario */
+        }
+
+        label[for="password"] {
+            display: block;
+            text-align: center;
+        }
+
+        label[for="username"] {
+            display: block;
+            text-align: center;
+        }
+
+
+    </style>
+
+</head>
+<body>
+    <div class="container d-flex justify-content-center align-items-center vh-100">
+        <div class="card">
+            <div class="card-body">
+                <div class="text-center mb-4">
+                    <div class="display-4">Bienvenido</div>
+                </div>
+                <form name="cajon" method="post" action="https://localhost:7298/Home/Menu">
+                    <div class="form-group">
+                        <input type="text" id="username" name="username" class="form-control" required />
+                        <label for="username">USUARIO</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="password" id="password" name="password" class="form-control" required />
+                        <label for="password">CONTRASEÑA</label>
+                    </div>
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-primary">Enviar</button>
+                    </div>
+                </form>
+                <p class="mt-3 text-center">
+                    <a href="#" onclick="mostrarMensaje()">Recuperar Contraseña</a>
+                </p>
+
+                <script>
+                    function mostrarMensaje() {
+                        alert("Contacte al Proveedor");
+                    }
+                </script>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+</html>

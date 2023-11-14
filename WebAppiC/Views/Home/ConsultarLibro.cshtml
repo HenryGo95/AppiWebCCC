@@ -1,0 +1,52 @@
+﻿@model List<string>
+
+@{
+    ViewData["Title"] = "Consultar Libros";
+}
+
+<div class="container">
+    <h1 class="display-4">Listado de Libros</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Datos del Libro</th>
+            </tr>
+        </thead>
+        <tbody>
+            @if (Model != null && Model.Any())
+            {
+                foreach (var datosLibro in Model)
+                {
+                    <tr>
+                        @if (!string.IsNullOrEmpty(datosLibro))
+                        {
+                            var detalles = datosLibro.Split(", ");
+                            foreach (var detalle in detalles)
+                            {
+                                <td>@detalle</td>
+                            }
+                        }
+                        else
+                        {
+                            <td colspan="3">Datos de libro no disponibles</td>
+                            <!-- Ajusta el colspan según la cantidad de columnas en tu tabla -->
+                        }
+                    </tr>
+                }
+            }
+            else
+            {
+                <tr>
+                    <td colspan="3">No se encontraron libros.</td>
+                    <!-- Ajusta el colspan según la cantidad de columnas en tu tabla -->
+                </tr>
+            }
+        </tbody>
+    </table>
+
+    <div class="text-center">
+        <button class="btn btn-primary" id="btnActualizar">Actualizar</button>
+        <a class="btn btn-secondary" href="/Home/Menu">Cancelar</a>
+    </div>
+</div>
